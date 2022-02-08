@@ -1,0 +1,66 @@
+.wrapper{
+    margin:2% 5%;
+}
+.row{
+    width: 100%;
+    display: inline-flex;
+    margin: 1%;
+}
+.col-2{
+    width: 17%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33%;
+}
+.col-6{
+    width: 50%;
+}
+input{
+    padding: 5px;
+}
+#btnContainer{
+    /* padding-left: 20%; */
+    display: block;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+}
+#output{
+    margin: 1%;
+    padding: 2%;
+}
+a{
+    padding-right: 5px;
+}
+#notification{
+    padding: 10px;
+    border-radius: 7px;
+}
+.success-msg{
+    background-color: #7ED47E;
+}
+.error-msg{
+    background-color: #FF5733;
+}
+input[type=button] {
+    background-color: #eeeeee;
+    padding: 10px;
+    margin: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 7px 0px #eeeeee;
+}
+input[type=button]:active{
+    font:message-box;
+}
+#updateBtn{
+    display: none;
+}

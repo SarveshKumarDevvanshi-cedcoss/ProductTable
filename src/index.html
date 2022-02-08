@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Product</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Product </h2>
+        <form action="" method="POST" >
+            <div class="row">
+                <div class="col-2"><label for="r1">Product SKU</label></div>
+                <div class="col-6"><input type="text" name="" id="r1" class="" autofocus></div>
+            </div>
+            <div class="row">
+                <div class="col-2"><label for="r2">Product Name</label></div>
+                <div class="col-6"><input type="text" name="" id="r2" class=""></div>
+            </div>
+            <div class="row">
+                <div class="col-2"><label for="r3">Product Price</label></div>
+                <div class="col-6"><input type="number" name="" id="r3" class=""></div>
+            </div>
+            <div class="row">
+                <div class="col-2"><label for="r4">Product Quantity</label></div>
+                <div class="col-6"><input type="number" name="" id="r4" class=""></div>
+            </div>
+            <div class="row" id="btnContainer">
+                <input type="button" value="Add Product" id="submitBtn">
+                <input type="button" value="Update Product" id="updateBtn" onclick="updateForm()">
+            </div>
+        </form>
+        <div id="notification"></div>
+        <div id="productList"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
