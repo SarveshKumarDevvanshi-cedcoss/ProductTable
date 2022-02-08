@@ -36,39 +36,39 @@ $(document).ready(function () {
     var Pid = $("#r1");
     var pName = $("#r2");
     var pPrice = $("#r3");
-    var qty=$("#r4");
-    if (validateFields(Pid, pName, pPrice,qty)) {
-        var prod = getProduct(Pid.val());
-        console.log(prod);
-        prod[0].P_Name = pName.val();
-        prod[0].Price = pPrice.val();
-        prod[0].Qty=qty.val();
+    var qty = $("#r4");
+    if (validateFields(Pid, pName, pPrice, qty)) {
+      var prod = getProduct(Pid.val());
+      console.log(prod);
+      prod[0].P_Name = pName.val();
+      prod[0].Price = pPrice.val();
+      prod[0].Qty = qty.val();
 
-        //Display the Product
-        displayInTable(product.products);
-      } else {
-        displayError(error,1);
-      }
+      //Display the Product
+      displayInTable(product.products);
+    } else {
+      displayError(error, 1);
+    }
   });
-  $("body").on("click","#editBtn",function () {
+  $("body").on("click", "#editBtn", function () {
     $("#submitBtn").hide();
     $("#updateBtn").show();
     var prod = getProduct($(this).data("pid"));
     var Pid = $("#r1");
     var pName = $("#r2");
     var pPrice = $("#r3");
-    var qty=$("#r4");
+    var qty = $("#r4");
     //  console.log( typeof(pid));
     Pid.val(prod[0].Id);
     pName.val(prod[0].P_Name);
     pPrice.val(prod[0].Price);
     qty.val(prod[0].Qty);
-  
-    Pid.attr('readonly',true);
+
+    Pid.attr("readonly", true);
   });
-  $("body").on("click","#deleteBtn", function () {
+  $("body").on("click", "#deleteBtn", function () {
     if (confirm("Are you sure?")) {
-    const prod = product.products.filter((element, idx) => {
+      const prod = product.products.filter((element, idx) => {
         return element.Id !== String($(this).data("pid"));
       });
       product.products = prod;
@@ -127,43 +127,35 @@ function validateFields(pid, pName, pPrice, qty) {
     error.push({ type: "error", msg: "SKU field is empty." });
     pid.css("border-color", "red");
     flag = false;
-  }
-   else if (pName.val().length == "") {
+  } else if (pName.val().length == "") {
     error.push({ type: "error", msg: "Name filed is empty." });
     pName.css("border-color", "red");
     flag = false;
-  } 
-  else if (pPrice.val().length == 0) {
+  } else if (pPrice.val().length == 0) {
     error.push({ type: "error", msg: "Price field is empty" });
     pPrice.css("border-color", "red");
     flag = false;
-  } 
-  else if (qty.val().length == 0) {
+  } else if (qty.val().length == 0) {
     error.push({ type: "error", msg: "Quantity field is empty" });
     qty.css("border-color", "red");
     flag = false;
-  }
-   else if (isNaN(pid.val())) {
+  } else if (isNaN(pid.val())) {
     error.push({ type: "error", msg: "SKU field should be integer." });
     pid.css("border-color", "red");
     flag = false;
-  } 
-  else if (!isNaN(pName.val())) {
+  } else if (!isNaN(pName.val())) {
     error.push({ type: "error", msg: "Name filed should be string." });
     pName.css("border-color", "red");
     flag = false;
-  } 
-  else if (isNaN(pPrice.val())) {
+  } else if (isNaN(pPrice.val())) {
     error.push({ type: "error", msg: "Price field should be integer" });
     pPrice.css("border-color", "red");
     flag = false;
-  } 
-  else if (isNaN(qty.val())) {
+  } else if (isNaN(qty.val())) {
     error.push({ type: "error", msg: "Quantity field should be integer" });
     qty.css("border-color", "red");
     flag = false;
-  }
-   else {
+  } else {
     error.shift();
   }
 
