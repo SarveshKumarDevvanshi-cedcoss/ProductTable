@@ -1,10 +1,11 @@
 .wrapper {
   margin: 2% 5%;
+  font-family: 'Open Sans', sans-serif;
 }
 .row {
   width: 100%;
   display: inline-flex;
-  margin: 1%;
+  margin: 2px;
 }
 .col-2 {
   width: 17%;
@@ -64,3 +65,94 @@ input[type="button"]:active {
 #updateBtn {
   display: none;
 }
+#headerTable i.fa-square-plus{
+  font-size: 1.5rem;
+}
+#headerTable{
+  width: 100%;
+  text-align: end;
+  /* margin: 2%; */
+}
+i{
+  color: #65819D;
+  width: 1em;
+  height: 1em ;
+  overflow: hidden;
+  
+  flex-shrink: 0;
+  user-select: none;
+}
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 8px;
+}
+button:hover{
+  background-color: #c3c6c9;
+}
+label:focus{
+  border-bottom: 2px solid #ff5733;
+}
+
+table{
+  width: 100%; 
+  border-collapse: collapse;
+}
+td,th{
+   /* border-bottom: 1px solid #ddd; */
+   text-align: left;
+   padding: 8px 10px;
+}
+tr{
+   border-bottom: 1px solid #ddd;
+}
+tr:nth-child(odd){
+   background-color: #f6f6f6;
+}
+tr:hover{
+   background-color: #f9f9f9;
+}
+thead tr{
+   background-color: dodgerblue !important;
+   color: white;
+}
+a {
+   text-decoration: none;
+}
+.header {
+   display: inline-flex;
+   width: 100%;
+   margin: 10px 0px;
+}
+div#filterDropdown {
+   /* float: left; */
+   width: 50%;
+   text-align: left;
+}
+div#searchBar {
+   /* float: right; */
+   width: 50%;
+   text-align: right;
+}
+#search {
+   padding: 8px 8px 0px 8px;
+   /* border-radius: 5px; */
+   border: none;
+   outline: none;
+   border-bottom: 2px solid #ddd;
+   font-size: 15px;
+}
+#searchBar{
+  border-bottom: 2px solid #ddd;
+}
+/* select {
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   background-color: transparent;
+   padding: 4px;
+   font-family: inherit;
+   font-size: inherit;
+   
+} */
