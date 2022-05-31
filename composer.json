@@ -1,7 +1,7 @@
 {
     "name": "sarvesh-devvanshi-cedcoss/product-table",
     "description": "product data table",
-    "version" : "1.0.0",
+    "version" : "1.0.0-dev",
     "require": {
         "php": ">=7.4"
     }
