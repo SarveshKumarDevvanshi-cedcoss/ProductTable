@@ -1,0 +1,7 @@
+{
+    "name": "SarveshKumarDevvanshi-cedcoss/ProductTable",
+    "description": "product data table",
+    "require": {
+        "php": ">=7.4"
+    }
+}
